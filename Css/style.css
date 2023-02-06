@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.home{
+    background-color: #1d2026;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.navbar-brand img{
+    width: 100px;
+}
+.Lamp{
+    position: absolute;
+    left: 25%;
+    top: 0;
+    z-index: 1;
+    
+}
+.Lamp img{
+    height: 400px;
+   
+   
+}
+.light{
+    position: absolute;
+    left: -115%;
+    top: 380px;
+    z-index: -1;
+    display: none;
+}
+#flexSwitchCheckDefault{
+    cursor: pointer;
+}
+
+#flexSwitchCheckDefault:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+.navbar-toggler:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+@media (max-width:767px){
+    .Lamp{
+       left: 50%;
+       transform: translateX(-50%);
+      
+    }
+    .Lamp img{
+        height: 200px;
+       
+    }
+    .light{
+        top: 198px;
+    }
+ .navbar{
+    z-index: 9999999;
+ }
+
+}
+
+
+.linkk{
+    position: relative;
+    transition: all 0.6s;
+    overflow: hidden;
+    width: fit-content;
+    
+}
+.nav-link{
+    margin: 0 15px;
+}
+.linkk:hover{
+    color: #00986f;
+}
+.linkk:hover::after{
+   left: 0;
+}
+.linkk::after{
+    content: "";
+    position: absolute;
+    background-color: #00986f;
+    width: 100%;
+    height: 3px ;
+    left: -100%;
+    bottom: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: all 0.6s;
+    
+}
+.form-check-input:checked{
+    background-color: #00986f;
+    border-color: #00986f;
+}
+.captions{
+    text-transform: capitalize;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 60px;
+    width: 50%;
+}
+.captions h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.captions p{
+    font-size: 20px;
+    line-height: 30px;
+    width: 80%;
+}
+.captions button{
+    padding: 10px 30px;
+    background-color: #00986f;
+    border-radius: 30px;
+    color: white;
+    text-transform: capitalize;
+    border: #00986f 2px solid;
+    transition: all 0.6s;
+}
+.captions button:hover{
+    transform: translateX(20px);
+}
+@media (max-width:767px){
+    .captions{
+        width: 100%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        left: 50%;
+        margin-top: 60px;
+      
+    }
+    .captions p{
+        width: 100%;
+        font-size: 16px;
+    }
+    .captions h1{
+        font-size: 30px;
+        width: 100%;
+    }
+    .navbar-nav{
+        background-color: #1d2026;
+        border-bottom: #00986f 3px solid;
+    }
+}
